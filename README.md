@@ -53,7 +53,7 @@ The following table summarizes the performance of different approaches:
 
 To evaluate the impact of distillation dataset size on model performance, a controlled experiment comparing two approaches: (i) supervised learning and (ii) supervised learning combined with white-box distillation was conducted. The results, shown in the figure below, indicate that the combined approach consistently achieves higher accuracy across varying sample sizes. These findings suggest that incorporating white-box distillation provides benefits, even when ground-truth labels are available and the student model can be trained directly using supervised learning alone.
 
-![Accuracy Plot](data\acc-sample-vary.png)
+![Accuracy Plot](/data/acc-sample-vary.png)
 
 ## Run the Project Locally
 
