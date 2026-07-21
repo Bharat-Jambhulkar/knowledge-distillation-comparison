@@ -71,7 +71,7 @@ def main(experiment_name=None, num_samples=None):
             "epochs": 24,
         },
         "White-Box Distillation": {
-            "use_gt": False,
+            "use_gt": True,
             "teacher_hard": False,
             "teacher_soft": True,
             "use_teacher": True,
@@ -97,5 +97,5 @@ def main(experiment_name=None, num_samples=None):
 
 if __name__ == "__main__":
     main("Black-Box Distillation", num_samples=30000)
-    main("White-Box Distillation", num_samples=30000)
-    main("Supervised Learning", num_samples=30000)
+    # main("White-Box Distillation", num_samples=30000)
+    # main("Supervised Learning", num_samples=30000)

@@ -27,8 +27,7 @@ knowledge-distillation-comparison/
 │   │       ├── cnn_model.pth        # Trained teacher weights
 │   │       └── trained-teacher-model-checkpoint.pth
 │   ├── training/                    # Training utilities
-│   │   ├── data_loader.py           
-│   │   └── train.py                 
+│   │    └──data_loader.py                          
 │   ├── distillation/                # Distillation implementation
 │   │   └── trainer.py               
 │   └── evaluation/               
@@ -44,14 +43,14 @@ The following table summarizes the performance of different approaches:
 
 | Method                          | Accuracy |
 |---------------------------------|----------|
-| Only Black Box                  | 0.5424   |
-| Only White Box                  | 0.5319   |
-| Black Box + Supervised          | 0.8230   |
-| White Box + Supervised          | 0.8838   |
-| Only Supervised                 | 0.8869   |
+| Only Black Box                  | 0.8785   |
+| Only White Box                  | 0.8756   |
+| Black Box + Supervised          | 0.8891   |
+| White Box + Supervised          | 0.8759   |
+| Only Supervised                 | 0.8867   |
 
 
-To evaluate the impact of distillation dataset size on model performance, a controlled experiment comparing two approaches: (i) supervised learning and (ii) supervised learning combined with white-box distillation was conducted. The results, shown in the figure below, indicate that the combined approach consistently achieves higher accuracy across varying sample sizes. These findings suggest that incorporating white-box distillation provides benefits, even when ground-truth labels are available and the student model can be trained directly using supervised learning alone.
+To evaluate the impact of distillation dataset size on model performance, a controlled experiment comparing the three approaches: (i) supervised learning, (ii) supervised learning combined with white-box distillation and (iii) supervised learning combined with black-box distillation was conducted. The results, shown in the figure below, indicate that the combined approach consistently achieves higher accuracy across varying sample sizes. These findings suggest that incorporating distillation provides benefits, even when ground-truth labels are available.
 
 ![Accuracy Plot](/data/acc-sample-vary.png)
 
